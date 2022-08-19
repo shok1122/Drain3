@@ -56,6 +56,7 @@ for k1 in automaton:
     for k2 in automaton[k1]:
         automaton[k1][k2]["ratio"] = automaton[k1][k2]["count"] / total
 
-print("-------")
 
-print(automaton)
+json_file = open("/tmp/drain.json", mode = "w")
+json.dump(automaton, json_file)
+json_file.close()
